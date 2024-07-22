@@ -1,0 +1,26 @@
+---
+- name: Configure EC2 instance
+  hosts: media_streaming
+  become: yes
+
+  tasks:
+  - name: Install Apache2
+    apt:
+      name: apache2
+      state: present
+
+  - name: Install MySQL
+    apt:
+      name: mysql-server
+      state: present
+
+  - name: Install Docker
+    apt:
+      name: docker.io
+      state: present
+
+  - name: Start and enable Docker
+    service:
+      name: docker
+      enabled: yes
+      state: started

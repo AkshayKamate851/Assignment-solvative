@@ -1,0 +1,2 @@
+[media_streaming]
+52.14.69.184 ansible_user=ec2-user ansible_private_key_file=~/.ssh/private-key
